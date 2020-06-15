@@ -1,0 +1,2 @@
+1. Hit F5 on the keyboard.
+2. Press a number then hit Enter to generate desired plot. In this case, I pressed 6 on the keyboard.

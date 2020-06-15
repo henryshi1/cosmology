@@ -1,0 +1,118 @@
+Delivered-To: henry.shi@my.stonybrook.edu
+Received: by 2002:a9d:171b:0:0:0:0:0 with SMTP id i27csp5768765ota;
+        Tue, 17 Sep 2019 13:28:47 -0700 (PDT)
+X-Google-Smtp-Source: APXvYqy5Fguh80gKZInCBcZurRdA/yHwfcymI5M+wqvcM/4SAvll/WDqA2E6Z5svVU5oSH9Dqjbo
+X-Received: by 2002:a37:470f:: with SMTP id u15mr383777qka.290.1568752127848;
+        Tue, 17 Sep 2019 13:28:47 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1568752127; cv=none;
+        d=google.com; s=arc-20160816;
+        b=btVeozgsvrxE7KYTOCAtxEAPkze7HUoDoioxzrXDspvvoTFlXR2oYVysJuEjIiKMKc
+         Y2sRk2Tbv+18TP4QJXiYxK3SVwuwf91OAb9w51M9cCZRVR+tNgTcrirEArYTyWxevSw/
+         VlyQD0naF98ag0lnfOv9XAIaEB0XuRRYycT0T4cV2+jIddho6OsBA/dn0G/ILoNGQD/Y
+         E3y7w0N9wlG3r27FQdcdrNkqBuvffjU/GWVkCdv3KUfNLZYZ754C1HQU6yCmvrZ+iaE5
+         2P4Ls55XJNLolHgsg4lK++zMsn7jtb5GNm/2lMdM/TfpUfTTcagIiAne3r6H3k3IgoPK
+         3AMw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version:dkim-signature;
+        bh=czU/F5QxyYOql0vQA/Fo11ez14XzaF0x+4FgNVCg8mg=;
+        b=JPTOAIfqLSyupXpg4Ykz1t4xmNsEQ9Oo1Qg7lqfuE5R3Dv0H3QjnwCWZuZEIgzmDHN
+         N7yBSEdaqBMaM4JuUtUi8o1+kKFHQErt1HLCnpiSkTpIFSV1fQ8dpf4sA1dX41lQeF+w
+         wggxf0Kh4Ps8knSlUd/a/xv9BQ8ntFfSD5PT6LO4s3w56WKUw8HNZJ3s5E1fuKU4wj2k
+         v3aCVT7jMJmmjQ5C3MdmtIkQ8EcyqCyaOplG9QxnbnL/9otFgqhVAfilFVuYNN0Divvn
+         wb+V+gmmRsCKVMx1HlMFpKc71qvNykmoAmivGpAG00lfCF5st4prXvHxYsLUvdOtdVS4
+         4/aw==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@stonybrook-edu.20150623.gappssmtp.com header.s=20150623 header.b=kPay+Ce6;
+       spf=pass (google.com: domain of will.farr@stonybrook.edu designates 209.85.167.52 as permitted sender) smtp.mailfrom=will.farr@stonybrook.edu
+Return-Path: <will.farr@stonybrook.edu>
+Received: from sbmta2.cc.stonybrook.edu (sbmta2.cc.stonybrook.edu. [129.49.2.199])
+        by mx.google.com with ESMTPS id o24si2653046qto.255.2019.09.17.13.28.47
+        for <henry.shi@my.stonybrook.edu>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 17 Sep 2019 13:28:47 -0700 (PDT)
+Received-SPF: pass (google.com: domain of will.farr@stonybrook.edu designates 209.85.167.52 as permitted sender) client-ip=209.85.167.52;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@stonybrook-edu.20150623.gappssmtp.com header.s=20150623 header.b=kPay+Ce6;
+       spf=pass (google.com: domain of will.farr@stonybrook.edu designates 209.85.167.52 as permitted sender) smtp.mailfrom=will.farr@stonybrook.edu
+Received: from mail-lf1-f52.google.com (mail-lf1-f52.google.com [209.85.167.52])
+	by sbmta2.cc.stonybrook.edu (8.14.8/8.14.8) with ESMTP id x8HKSkXe003081
+	(version=TLSv1/SSLv3 cipher=AES128-GCM-SHA256 bits=128 verify=FAIL)
+	for <henry.shi@stonybrook.edu>; Tue, 17 Sep 2019 16:28:47 -0400
+Received: by mail-lf1-f52.google.com with SMTP id u3so3892243lfl.10
+        for <henry.shi@stonybrook.edu>; Tue, 17 Sep 2019 13:28:46 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=stonybrook-edu.20150623.gappssmtp.com; s=20150623;
+        h=mime-version:from:date:message-id:subject:to;
+        bh=czU/F5QxyYOql0vQA/Fo11ez14XzaF0x+4FgNVCg8mg=;
+        b=kPay+Ce66O9bjcVojX/8nLkwBc+DHzyB74Hso2XkIgzVEl1t9U3++iEUT+AQPvLiBw
+         Pe0ntu9GL3lST/NgFitpommKbR6vhXa3WQCesJgrgMtjykQG7hFnhPTE0kG0a1TGOMpr
+         2bqqH1R+LyEdwioAfGwrAFvEEZ8sL/XzWXE2ztIgMr3AjUDe3UbO9ZfOHI5iOSNC3Ugz
+         j11g4gVnx5n/U9YTQ1+hZmTQX/u9GFQZBfJYkWE+otf/s0t+ACSQXsElWe3mMw7w1kMb
+         17rJPtZE7F+y5aNwzOctE+iGlCX4JD+chjQ9EZHfMhteEBn953dam3pVEXuMMBx0OnVg
+         GytA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=x-gm-message-state:mime-version:from:date:message-id:subject:to;
+        bh=czU/F5QxyYOql0vQA/Fo11ez14XzaF0x+4FgNVCg8mg=;
+        b=RRViMZrvt1zUj3lYTb6rE4VockqsOPPBRbVTNuE/RF+Cdr65UAv87cPURXNZB96qhU
+         WsRWIAChReAeWa6ODFI7LsW9oumuyuyFs5QnPBhnhymrlDHONPnefzpOKwvt1DvsiGf4
+         CRb4JbqXu3leDPGaWdgeDTe/7tUUltXYT9Up1UCE34yKVC1k7NaVYBpssMCd46OhN0SV
+         Mi6JlVR8xm7hQMnlrjP8bX4PACw4SfMsB4YgzNCA/C9xy5Ccp4a3eFF7soiSiZApH7YL
+         fHXUBbgkhWY7GOD28aS01VK7huE5wbqsxfewsX32FkSREXplNuHMAPiQmY3oRGyIpqpm
+         mfFg==
+X-Gm-Message-State: APjAAAVwVSmwNqVFhUGPocygNkFWMfro5TXgP9zgDkeez9ToJ2sJuFnV
+	/77mwWuci9HGlTSBmR60vUj73LBTzid0/0TF+SMnbszWREaKsg==
+X-Received: by 2002:a05:6512:25b:: with SMTP id b27mr110775lfo.60.1568752120381;
+ Tue, 17 Sep 2019 13:28:40 -0700 (PDT)
+MIME-Version: 1.0
+From: Will Farr <will.farr@stonybrook.edu>
+Date: Tue, 17 Sep 2019 16:28:22 -0400
+Message-ID: <CAF2fPJ+0oRnhaOsUL3=GDzKHBJuxe0YQS6D=LopduEKJfKyvpg@mail.gmail.com>
+Subject: Paper on Distances in Cosmology
+To: Henry Shi <henry.shi@stonybrook.edu>
+Content-Type: multipart/alternative; boundary="000000000000e04c8f0592c590fa"
+X-Brightmail-Tracker: H4sIAAAAAAAAA+NgFrrHosTGxXIxdLmJ7n/HxliDU5clLK40nGFyYPSYOO8pewBjFGtmXlJ+
+	RQJrRsfcV0wFnzgrti+by9bA+Iyji5GTQ0ggXWL13iWsEPZERolzC8S6GLk4WAR+sEhMuPCQ
+	EcSRAHGu/ZnGAuE0MUo0brkN1iIhUCRx8fMpRgi7XGLCmZ8sIDavgKDEyZlPgGwODjYBLYnl
+	z5NBwiwCqhJnry+DKgmQ+PB5IZgtLKAhceL8N3YQWwTIfvx0K1icWcBH4svPN4wTGPlmIZk6
+	C0kKwtaQWHBnH5StLbFs4WtmCFtTonX7b/YFjKyrGCWKk3JLEo30kpP1ikvy8yqTivLzs/VS
+	U0o3MQIDkAEIdjBee+l6iJGJg/MQowAHoxIPb6VxbIwQa2JZcWUuSJz7EKMkB5OSKO8dscZY
+	Ib6k/JTKjMTijPii0pzU4kOMEhw8SiK80x2AcrzFBYm5xZnpMCkZDg4lCd6Auw2xQoJFqemp
+	FWmZOSWpRRDpU4yuHEs2zlvEzNHxaxGQ/LhqCZB893MxkPwOYgux5OXnpUqJ8z63B5otADI7
+	ozQPrh+WAC4xykoJ8560BarhKUgtys0sQZV/xSgO9JUw72aQC3ky80rgDnwFdDsT0O0Li2tB
+	bi9JREhJNTA6K2wuUDISiXR8ybbvXO8ynxjOB2uLftev+8E23Zhl/iVJ55j3n9YaBmsEFwtM
+	6HX5bDtZ3OPYdrUJpQqW9fzSHLNX50XVH30jWHNCZOFF5vZZn9b+ct47af+5e0umqEaevnPh
+	yRt3vkvBl9/0v3bMLLzxrC789oR6Rk+mHplpl+vntfmeOBqrxFKckWioxVxUnAgAClQwkfEC
+	AAA=
+
+--000000000000e04c8f0592c590fa
+Content-Type: text/plain; charset="UTF-8"
+
+Hi Henry,
+
+The paper I was referring to, which will help you to calculate d_L(z |
+cosmology) is
+
+https://ui.adsabs.harvard.edu/abs/1999astro.ph..5116H/abstract
+
+You should check your calculations (if you are working in Python) with the
+astropy library (the cosmology module performs similar calculations:
+https://docs.astropy.org/en/stable/cosmology/).
+
+Will
+
+--000000000000e04c8f0592c590fa
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr">Hi Henry,<div><br></div><div>The paper I was referring to,=
+ which will help you to calculate d_L(z | cosmology) is=C2=A0</div><div><br=
+></div><div><a href=3D"https://ui.adsabs.harvard.edu/abs/1999astro.ph..5116=
+H/abstract">https://ui.adsabs.harvard.edu/abs/1999astro.ph..5116H/abstract<=
+/a><br></div><div><br></div><div>You should check your calculations (if you=
+ are working in Python) with the astropy library (the cosmology module perf=
+orms similar calculations:=C2=A0<a href=3D"https://docs.astropy.org/en/stab=
+le/cosmology/">https://docs.astropy.org/en/stable/cosmology/</a>).</div><di=
+v><br></div><div>Will</div></div>
+
+--000000000000e04c8f0592c590fa--
