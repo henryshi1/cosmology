@@ -1,0 +1,49 @@
+\documentclass[modern]{aastex63}
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+
+\newcommand{\SBUAffil}{Stony Brook University, Stony Brook, NY 11794}
+
+\DeclareMathOperator{\var}{Var}
+
+\begin{document}
+\title{Determining the Hubble Constant from Observations of Distance Modulus and
+Redshift for Type Ia Supernovae}
+
+% -- List each individual author --
+\author{Henry Shi}
+\email{henry.shi@stonybrook.edu}
+\affiliation{\SBUAffil}
+
+\author{Will Farr, Ph.D.}
+\email{will.farr@stonybrook.edu}
+\affiliation{\SBUAffil}
+
+\section{Abstract}
+
+We present the distance moduli and redshifts for 1048 confirmed Type Ia
+supernovae (SNe Ia) from Scolnic et. al 2018. These SNe Ia range from
+$0.01 < z < 2.3$ and are compiled from the Pan-STARRS1 (PS1) Medium Deep Survey,
+Sloan Digital Sky Survey (SDSS), SNLS, low-z, and Hubble Space Telescope
+observations. We call this dataset the "Pantheon sample". By fitting a model of
+distance modulus vs redshift to the data, we obtain values of three parameters
+that shed light on the universe: mass density $\Omega_m$, equation of state $w$,
+and distance modulus offset $\Delta_{dm}$ of the model from the data. Using the
+Markov-Chain Monte Carlo sampling method for 10,000 iterations yields
+$\Omega_m=0.337\pm0.066$, $w=-1.182\pm0.521$, $\Delta_{dm}=10.634\pm0.261$.
+From these parameters we hope to determine the
+value of the Hubble constant, $H_0$. $H_0$ is related to the speed of expansion
+of the universe, so by obtaining a precise estimate of the Hubble constant, we
+hope to gain insight into the history of the universe. With these results, our
+experiment fails to reproduce the results of Scolnic 2018.
+In addition, we are unable to separate random error
+and systematic error in our parameter uncertainties.
+Further refinement of our sampling algorithm and further processing of
+$\Omega_m$, $w$, and $\Delta_{dm}$ are needed to determine the Hubble constant,
+$H_0$.
+\newline
+\newline
+\textit{Key words:} model fitting, Markov Chain sampling, Type Ia supernova,
+cosmology, distance modulus, Hubble constant
+\end{document}
