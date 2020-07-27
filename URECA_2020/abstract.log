@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.31)  24 JUL 2020 21:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.5.31)  26 JUL 2020 18:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -595,7 +595,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 25--49
+Underfull \hbox (badness 10000) in paragraph at lines 25--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--52
 
  []
 
@@ -605,12 +610,12 @@ tination with the same identifier (name{Doc-Start-footnote.\\hskip\040-12.1pt})
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.49 \end{document}
+l.52 \end{document}
                    ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 49.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
  (./abstract.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 49.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 49.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `abstract.out' has not changed.
 (rerunfilecheck)             Checksum: 063A9B9853E85AB54BA4FCB47780BD6B;43.
  ) 
@@ -634,7 +639,7 @@ amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.p
 fb>
-Output written on abstract.pdf (1 page, 133028 bytes).
+Output written on abstract.pdf (1 page, 135997 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
