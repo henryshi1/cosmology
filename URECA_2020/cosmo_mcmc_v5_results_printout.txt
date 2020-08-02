@@ -1,0 +1,6 @@
+average omega_m = 0.337
+uncertainty in omega_m = 0.0
+average w = -1.182
+uncertainty in w = 0.0
+average dm_offset = 10.620329650373176
+uncertainty in dm_offset = 0.3074707428698345
